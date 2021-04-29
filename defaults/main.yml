@@ -103,6 +103,7 @@ concourse_worker_retire_on_stop: yes
 concourse_work_dir: "{{ concourse_install_dir }}/work"
 concourse_tsa_public_key_path: "{{ concourse_etc_dir }}/host_key.pub"
 concourse_tsa_worker_key_path: "{{ concourse_etc_dir }}/worker_key"
+concourse_worker_runtime: ""
 #concourse_tsa_host:
 #concourse_tsa_public_key:
 #concourse_tsa_worker_key:
