@@ -38,6 +38,12 @@ exec {{ concourse_binary_path }} web \
 {% if concourse_vault_client_token %}
   --vault-client-token "{{ concourse_vault_client_token }}" \
 {% endif %}
+{% if concourse_prometheus_bind_ip %}
+  --prometheus-bind-ip "{{ concourse_prometheus_bind_ip }}" \
+{% endif %}
+{% if concourse_prometheus_bind_port %}
+  --prometheus-bind-port "{{ concourse_prometheus_bind_port }}" \
+{% endif %}
 {% if concourse_encryption_key is defined %}
   --encryption-key "{{ concourse_encryption_key }}" \
 {% endif %}

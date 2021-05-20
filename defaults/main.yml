@@ -58,6 +58,8 @@ concourse_host_key_path: "{{ concourse_etc_dir }}/host_key"
 concourse_session_signing_key_path: "{{ concourse_etc_dir }}/session_signing_key"
 #concourse_vault_url:
 #concourse_vault_client_token:
+concourse_prometheus_bind_ip: "127.0.0.1"
+concourse_prometheus_bind_port: "9090"
 #concourse_encryption_key:
 #concourse_old_encryption_key:
 #concourse_host_key:
