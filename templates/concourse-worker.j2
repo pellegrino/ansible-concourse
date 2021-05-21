@@ -2,7 +2,7 @@
 
 # {{ ansible_managed }}
 
-{% for key, value in concourse_worker_env.items() %}
+{% for key, value in concourse_worker_env_vars.items() %}
 export {{ key }}="{{ value }}"
 {% endfor %}
 
@@ -20,8 +20,6 @@ exec {{ concourse_binary_path }} worker \
 {% if concourse_baggageclaim_driver is defined %}
   --baggageclaim-driver "{{ concourse_baggageclaim_driver }}" \
 {% endif %}
-<<<<<<< HEAD
-=======
 {% if concourse_garden_config is defined %}
   --garden-config "{{concourse_garden_config_path}}" \
 {% endif %}
@@ -34,7 +32,6 @@ exec {{ concourse_binary_path }} worker \
   --containerd-bin "{{concourse_bin_dir}}/containerd" \
   --containerd-init-bin "{{concourse_bin_dir}}/init" \
 {% endif %}
->>>>>>> loansnap/master
 {% if concourse_worker_options is defined %}
   {{ concourse_worker_options }}
 {% endif %}

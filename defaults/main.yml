@@ -68,11 +68,7 @@ concourse_prometheus_bind_port: "9090"
 #concourse_resource_checking_interval:
 concourse_base_resource_type_defaults_file: "{{ concourse_etc_dir }}/base_resource_type_defaults.yml"
 #concourse_web_options:
-<<<<<<< HEAD
-concourse_web_env: {}
-=======
 concourse_web_env_vars: {}
->>>>>>> loansnap/master
 
 # Web PostgreSQL variables
 
@@ -120,11 +116,7 @@ concourse_worker_runtime: ""
 #concourse_worker_tag:
 #concourse_baggageclaim_driver:
 #concourse_worker_options:
-<<<<<<< HEAD
-concourse_worker_env: {}
-=======
 concourse_worker_env_vars: {}
->>>>>>> loansnap/master
 
 # Worker filesystem variables
 

@@ -121,11 +121,7 @@ but exist for when control over related behaviour is needed. See examples for a 
 * `concourse_base_resource_type_defaults`: Optional. A hash of cluster-wide defaults for resource types.
 * `concourse_base_resource_type_defaults_file`: Optional. The path to the resource type defaults file.
 * `concourse_web_options`: Optional. Other non-managed options to pass to `concourse`.
-<<<<<<< HEAD
-* `concourse_web_env`: Optional. A hash of environment variables made available to the `concourse web` process.
-=======
 * `concourse_web_env_vars`: Optional. A dictionary of environment variables to set when the web node runs
->>>>>>> loansnap/master
 
 #### Web PostgreSQL Variables
 
@@ -177,11 +173,7 @@ Unsupported. Do it yer dang self by supplying `concourse web` command options wi
 * `concourse_worker_tag`: Optional. The value of the `--tag` option.
 * `concourse_baggageclaim_driver`: Optional. The driver to use for managing volumes.
 * `concourse_worker_options`: Optional. Other non-managed options to pass to `concourse`.
-<<<<<<< HEAD
-* `concourse_worker_env`: Optional. A hash of environment variables made available to the `concourse worker` process.
-=======
 * `concourse_worker_env_vars`: Optional. A dictionary of environment variables to set when the worker node runs
->>>>>>> loansnap/master
 * `concourse_manage_work_volume`: Optional. Default: "no". Activate management of the work volume.
 * `concourse_work_volume_device`: Required when `concourse_manage_work_volume` is "yes". The device to mount as the work volume.
 * `concourse_work_volume_fs_type`: Optional. The filesystem type of the work volume. By default, this is calculated to be `btrfs` or `ext4` based on the value of `concourse_baggageclaim_driver`.
@@ -219,7 +211,7 @@ Unsupported. Do it yer dang self by supplying `concourse web` command options wi
         concourse_tsa_host: my-atc
         concourse_tsa_public_key: "{{ host_pub_key }}"
         concourse_tsa_worker_key: "{{ worker_key }}"
-        concourse_worker_env:
+        concourse_worker_env_vars:
           CONCOURSE_GARDEN_NETWORK_POOL: 10.254.0.0/16
           CONCOURSE_GARDEN_MAX_CONTAINERS: 512
           CONCOURSE_GARDEN_DOCKER_REGISTRY: https://docker.my-private-registry.org

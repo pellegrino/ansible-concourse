@@ -19,11 +19,13 @@
     concourse_postgres_user: concourse
     concourse_postgres_password: concourse
     concourse_postgres_host: localhost
+    concourse_worker_runtime: containerd
     concourse_local_users:
     - name: "admin"
       password: "admin"
     concourse_main_team_local_users:
     - admin
+
     concourse_base_resource_type_defaults:
       registry-image:
         registry_mirror:
@@ -35,3 +37,4 @@
     concourse_tsa_host: "localhost:2222"
     concourse_tsa_public_key: "{{ lookup('file', 'spec/default/fixtures/host_key.pub') }}"
     concourse_tsa_worker_key: "{{ lookup('file', 'spec/default/fixtures/worker_key') }}"
+
