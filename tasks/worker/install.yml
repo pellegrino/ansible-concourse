@@ -52,7 +52,7 @@
   become: yes
   register: concourse_worker_service
   notify:
-  - restart concourse worker
   - systemd daemon reload
+  - restart concourse worker
   tags:
   - no-test
