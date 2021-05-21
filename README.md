@@ -236,5 +236,5 @@ docker build .
 
 MIT © Troy Kinsella
 
-[travis-image]: https://travis-ci.org/troykinsella/ansible-concourse.svg?branch=master
-[travis-url]: https://travis-ci.org/troykinsella/ansible-concourse
+[travis-image]: https://travis-ci.org/pellegrino/ansible-concourse.svg?branch=master
+[travis-url]: https://travis-ci.org/pellegrino/ansible-concourse
