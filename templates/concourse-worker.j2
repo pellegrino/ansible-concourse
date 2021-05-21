@@ -27,7 +27,7 @@ exec {{ concourse_binary_path }} worker \
   --runtime "{{concourse_worker_runtime}}" \
 {% endif %}
 {% if concourse_worker_runtime == "containerd" %}
-  --containerd-dns-server "8.8.8.8" \
+  --containerd-dns-server "{{concourse_worker_containerd_dns_server}}" \
   --containerd-cni-plugins-dir "{{concourse_bin_dir}}" \
   --containerd-bin "{{concourse_bin_dir}}/containerd" \
   --containerd-init-bin "{{concourse_bin_dir}}/init" \
