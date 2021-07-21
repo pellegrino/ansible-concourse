@@ -26,7 +26,7 @@ It does not:
 ## Installation
 
 ```bash
-ansible-galaxy install troykinsella.concourse
+ansible-galaxy install pellegrino.concourse
 ```
 
 ## Branches
