@@ -31,6 +31,7 @@ exec {{ concourse_binary_path }} worker \
   --containerd-cni-plugins-dir "{{concourse_bin_dir}}" \
   --containerd-bin "{{concourse_bin_dir}}/containerd" \
   --containerd-init-bin "{{concourse_bin_dir}}/init" \
+  --containerd-allow-host-access "{{ concourse_worker_containerd_allow_host_access }}"
 {% endif %}
 {% if concourse_worker_options is defined %}
   {{ concourse_worker_options }}

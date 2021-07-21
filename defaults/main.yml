@@ -1,5 +1,4 @@
 ---
-
 # Maintenance variables
 
 concourse_force_restart: no
@@ -111,6 +110,7 @@ concourse_tsa_public_key_path: "{{ concourse_etc_dir }}/host_key.pub"
 concourse_tsa_worker_key_path: "{{ concourse_etc_dir }}/worker_key"
 concourse_worker_runtime: "containerd"
 concourse_worker_containerd_dns_server: "8.8.8.8"
+concourse_worker_containerd_allow_host_access: "false"
 
 #concourse_tsa_host:
 #concourse_tsa_public_key:
