@@ -163,6 +163,7 @@ Unsupported. Do it yer dang self by supplying `concourse web` command options wi
 - `concourse_worker_launcher_path`: Optional. The path to the script that launches the Concourse worker process.
 - `concourse_worker_land_path`: Optional. The path to the script that lands a worker.
 - `concourse_worker_retire_path`: Optional. The path to the script that retires a worker.
+- `concourse_worker_runtime`: Optional. Default: "containerd". Can be set to either garden or containerd
 - `concourse_worker_binary_mode`: Optional. The file mode of the worker launcher, land, and retire scripts.
 - `concourse_worker_land_on_stop`: Optional. Default: "no". Run `concourse land-worker` upon stopping the service.
 - `concourse_worker_retire_on_stop`: Optional. Default: "yes". Run `concourse retire-worker` upon stopping the service.
@@ -184,6 +185,13 @@ Unsupported. Do it yer dang self by supplying `concourse web` command options wi
 - `concourse_work_volume_fs_resize`: Optional. Default: "no". If yes, if the work volume block device and filesystem size differ, grow the filesystem into the space.
 - `concourse_work_volume_mount_path`: Optional. The directory to which the work volume will be mounted.
 - `concourse_work_volume_mount_opts`: Optional. Work volume mount options.
+
+#### Containerd
+
+Added a few extra flags for configuring containerd. Containerd is now the default in favor of Garden.
+
+- `concourse_worker_containerd_dns_server`: Optional. Default: "1.1.1.1".
+- `concourse_worker_containerd_allow_host_access`: Optional. Default: "false". If set to "true", it will allow containerd to access services running on the host.
 
 ## Example Playbook
 
