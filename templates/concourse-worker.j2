@@ -1,10 +1,13 @@
-#!/usr/bin/env bash
-
 # {{ ansible_managed }}
 
+#!/usr/bin/env bash
 {% for key, value in concourse_worker_env_vars.items() %}
 export {{ key }}="{{ value }}"
 {% endfor %}
+
+{% if concourse_worker_runtime == "containerd" %}
+  export CONCOURSE_CONTAINERD_ALLOW_HOST_ACCESS="{{ concourse_worker_containerd_allow_host_access }}"
+{% endif %}
 
 exec {{ concourse_binary_path }} worker \
   --tsa-host "{{ concourse_tsa_host }}" \
@@ -31,7 +34,6 @@ exec {{ concourse_binary_path }} worker \
   --containerd-cni-plugins-dir "{{concourse_bin_dir}}" \
   --containerd-bin "{{concourse_bin_dir}}/containerd" \
   --containerd-init-bin "{{concourse_bin_dir}}/init" \
-  --containerd-allow-host-access "{{ concourse_worker_containerd_allow_host_access }}"
 {% endif %}
 {% if concourse_worker_options is defined %}
   {{ concourse_worker_options }}
